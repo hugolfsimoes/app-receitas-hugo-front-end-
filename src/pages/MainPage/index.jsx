@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from '../../images/logo.png';
 
 export default function MainPage() {
+
+  const getAllRecipes = async () => {
+    const response = await fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=');
+    const allRecipes = await response.json();
+    console.log(allRecipes);
+  };
+
+  useEffect(() => {
+    getAllRecipes();
+
+  }, []);
+
 
 
   return (
