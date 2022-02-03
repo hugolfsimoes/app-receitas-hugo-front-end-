@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import FilterMeal from '../../components/FilterMeal';
+import Header from '../../components/Header';
 import logo from '../../images/logo.png';
 
 export default function MainPage() {
@@ -19,15 +20,16 @@ export default function MainPage() {
 
   return (
     <>
+      <Header />
       <FilterMeal />
-      <div style={ { display: "flex", flexWrap: "wrap", width: '100%', height: "100vhs" } }>
+      <div style={{ display: "flex", flexWrap: "wrap", width: '100%', height: "100vhs" }}>
         {
           allMeals.map(meal => {
             return (
-              <div key={ meal.idMeal } style={ { display: "flex", flexDirection: "column", width: "100px", height: "200px", alignItems: "center" } }>
-                <img style={ { width: "80%" } } src={ meal.strMealThumb } alt="Ilustrate meal" />
-                <h1>{ meal.strMeal }</h1>
-                <p>{ meal.strCategory }</p>
+              <div key={meal.idMeal} style={{ display: "flex", flexDirection: "column", width: "100px", height: "200px", alignItems: "center" }}>
+                <img style={{ width: "80%" }} src={meal.strMealThumb} alt="Ilustrate meal" />
+                <h1>{meal.strMeal}</h1>
+                <p>{meal.strCategory}</p>
                 <p></p>
               </div>
             );
