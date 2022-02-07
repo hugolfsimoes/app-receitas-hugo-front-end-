@@ -1,0 +1,20 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.meal-card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px 20px 10px;
+  width: 20%;
+}
+
+.meal-img {
+  border-radius: 5px;
+  width: 100%;
+}/* 
+ display: "flex", flexDirection: "column", width: "100px", height: "200px", alignItems: "center" }} */

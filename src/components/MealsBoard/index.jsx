@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './style.css';
 
 export default function MealsBoard() {
   const [allMeals, setAllMeals] = useState([]);
@@ -13,17 +14,15 @@ export default function MealsBoard() {
     getAllRecipes();
   }, []);
 
-
-
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", width: '100%', height: "100vhs" }}>
+    <div className='board'>
       {
-        allMeals.map(meal => {
+        allMeals?.map(meal => {
           return (
-            <div key={meal.idMeal} style={{ display: "flex", flexDirection: "column", width: "100px", height: "200px", alignItems: "center" }}>
-              <img style={{ width: "80%" }} src={meal.strMealThumb} alt="Ilustrate meal" />
+            <div key={meal.idMeal} className='meal-card'>
+              <img className='meal-img' src={meal.strMealThumb} alt="Ilustrate meal" />
               <h1>{meal.strMeal}</h1>
-              <p>{meal.strCategory}</p>
+              <p>Category: {meal.strCategory}</p>
               <p></p>
             </div>
           );
