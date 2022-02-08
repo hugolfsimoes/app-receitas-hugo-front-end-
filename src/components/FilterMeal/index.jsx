@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import {
+  getAllCategories,
+  getAllAreas,
+  getAllIngredients
+} from '../../service/serviceApi';
 
 
 
@@ -10,28 +15,25 @@ export default function FilterMeal() {
   const [allAreas, setAllAreas] = useState([]);
   const [allIngredients, setAllIngredients] = useState([]);
 
-  const getAllCategories = async () => {
-    const response = await fetch("https://www.themealdb.com/api/json/v1/1/categories.php");
-    const { categories } = await response.json();
+  const getAllCategoriesApi = async () => {
+    const { categories } = await getAllCategories();
     setAllCategories(categories);
   };
 
-  const getAllAreas = async () => {
-    const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list");
-    const { meals } = await response.json();
+  const getAllAreasApi = async () => {
+    const { meals } = await getAllAreas();
     setAllAreas(meals);
   };
 
-  const getAllIngredients = async () => {
-    const response = await fetch("https://www.themealdb.com/api/json/v1/1/list.php?i=list");
-    const { meals } = await response.json();
+  const getAllIngredientsApi = async () => {
+    const { meals } = await getAllIngredients();
     setAllIngredients(meals);
   };
 
   useEffect(() => {
-    getAllCategories();
-    getAllAreas();
-    getAllIngredients();
+    getAllCategoriesApi();
+    getAllAreasApi();
+    getAllIngredientsApi();
   }, []);
   return (
     <form>
