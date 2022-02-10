@@ -10,5 +10,10 @@ const createNewUser = async (body) => {
   return result;
 };
 
+const login = async (body) => {
+  const result = await instance.post('/login/', body);
+  return result;
+};
 
-export { createNewUser };
+
+export { createNewUser, login };

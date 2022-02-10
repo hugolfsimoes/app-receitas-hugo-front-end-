@@ -56,7 +56,8 @@ export default function Register() {
             <input
               className="input"
               type="email" placeholder="Email"
-              value={inputValues.email} name='email'
+              value={inputValues.email}
+              name='email'
               onChange={e => handleChangeInput(e)} />
             <span className="icon is-small is-left">
               <i className="fas fa-envelope"></i>
