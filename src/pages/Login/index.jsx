@@ -18,9 +18,10 @@ export default function Login() {
 
   const handleClickLogin = async () => {
     try {
-      const { data } = await login(inputValues);
-      if (data.token) {
-        localStorage.setItem("token", data.token);
+      const { data: { id, name, email, role, token } } = await login(inputValues);
+      if (token) {
+        localStorage.setItem("token", token);
+        localStorage.setItem("user", JSON.stringify({ id, name, email, role }));
         navigate(`/`);
       }
     } catch (error) {
