@@ -3,12 +3,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5vh;
+  height: 8vh;
   width: 100%;
 }
 
 img {
-  width: 40px;
+  border: 2px solid white;
+  margin-left: 20px;
+  width: 50px;
+  cursor: pointer;
 }
 
 button {

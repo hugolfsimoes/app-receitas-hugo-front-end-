@@ -1,0 +1,50 @@
+.container-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.meal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.meal-title {
+  color: red;
+  font-size: 40px;
+  font-weight: bolder;
+}
+.meal-image {
+  height: 50vh;
+  width: 40%;
+}
+
+.meal-info div {
+  margin-top: 20px;
+  align-self: flex-start;
+}
+
+.container-prepare ul, p{
+  padding: 20px;
+}
+.container-prepare h3 {
+  color: red;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.container-ingredient-video {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+iframe {
+  height: 50vh;
+  width: 50%;
+  margin: 100px;
+}

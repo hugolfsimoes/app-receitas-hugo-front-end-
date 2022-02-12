@@ -20,7 +20,7 @@ export default function Header() {
   return (
 
     <header>
-      <img src={logo} alt="logo" />
+      <img src={logo} alt="logo" onClick={() => navigate('/')} />
       <h1>{userData.name || ''}</h1>
       <button type='button' onClick={handleCLickLogout}>Logout</button>
     </header>

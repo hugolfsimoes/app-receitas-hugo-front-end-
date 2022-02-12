@@ -8,7 +8,6 @@ export default function MainPage() {
   return (
     <>
       <Header />
-      <FilterMeal />
       <MealsBoard />
     </>
   );
